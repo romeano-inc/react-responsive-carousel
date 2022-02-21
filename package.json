@@ -60,7 +60,8 @@
         "publish-to-npm": "npm version patch && npm publish && git push --tags",
         "postpublish-to-npm": "yarn changelog && yarn update-codesandbox && git add . && git commit -m 'Updating changelog and codesandbox' && git push origin master",
         "prepublish-prerelease-to-npm": "git pull && yarn build && git add . && git commit -m 'Prepare for publishing prerelease'",
-        "publish-prerelease-to-npm": "(git pull && npm version prerelease --preid=next && npm publish)"
+        "publish-prerelease-to-npm": "(git pull && npm version prerelease --preid=next && npm publish)",
+        "postinstall": "tsc --outDir ./build"
     },
     "devDependencies": {
         "@babel/cli": "^7.8.4",
