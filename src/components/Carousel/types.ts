@@ -59,7 +59,7 @@ export interface CarouselProps {
     showStatus: boolean;
     showIndicators: boolean;
     showThumbs: boolean;
-    statusFormatter: (currentItem: number, total: number) => string;
+    statusFormatter: (currentItem: number, total: number) => any;
     stopOnHover: boolean;
     swipeable: boolean;
     swipeScrollTolerance: number;
